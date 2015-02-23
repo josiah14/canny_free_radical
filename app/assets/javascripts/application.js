@@ -10,7 +10,7 @@
 
 var app = angular.module('ui.bootstrap.demo', ['ui.bootstrap', 'ngRoute', 'ngResource']);
 
-app.controller('AccordionDemoCtrl', function ($scope) {
+app.controller('AccordionDemoCtrl', ['$scope', function ($scope) {
   $scope.oneAtATime = true;
 
   $scope.groups = [
@@ -40,5 +40,5 @@ app.controller('AccordionDemoCtrl', function ($scope) {
     isFirstDisabled: false
   };
 
-});
+}]);
 
