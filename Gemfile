@@ -5,14 +5,10 @@ ruby '2.1.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
+# Front-end dependency manager
+gem 'bower-rails', '~> 0.9.2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
-# CSS framework
-gem 'bootstrap-sass', '~> 3.3.3'
-# JavaScript framework
-gem 'angularjs-rails', '~> 1.3.10'
-# Get rid of the jQuery dependency by using Angular-ui.
-gem 'angular-ui-bootstrap-rails', '~> 0.9.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
