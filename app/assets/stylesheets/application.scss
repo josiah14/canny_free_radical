@@ -13,8 +13,9 @@
  */
 
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
-@import "bootstrap-sprockets";
-@import "bootstrap";
+$icon-font-path: "bootstrap-sass-official/assets/fonts/bootstrap/";
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap-sprockets";
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap";
 
 .checkbox {
   margin: 20px;
