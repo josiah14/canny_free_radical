@@ -2,13 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-html {
+body {
   background: image-url('Computers.jpg') no-repeat center center fixed;
   height: 100%;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+}
+
+div {
+  background-color: transparent;
 }
 
 h1 {
