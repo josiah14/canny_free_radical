@@ -3,9 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .home {
+  position: fixed;
   background: image-url('Computers.jpg') no-repeat center center fixed;
   background-size: cover;
-  height: 100vh;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
