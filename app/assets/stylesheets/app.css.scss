@@ -1,0 +1,68 @@
+.navbar {
+    height: 15vh;
+    min-height: 0;
+    background: rgba(30,20,30, 0.7);
+    overflow: hidden;
+    display: block;
+    #logo {
+        height: 15vh;
+        margin-left: 10%;
+    }
+
+    #title-text {
+        max-width: 500px;
+        height: 6vh;
+    }
+
+    .item {
+        display: inline-block;
+        color: white;
+        text-align: right;
+        font-size: 3vh; 
+        overflow: visible;
+
+        #e-mail {
+            padding-top: 3vh;
+            margin: 0;
+        }
+        #phone {
+            margin: 0;
+        }
+
+    }
+
+    #contact-info {
+        text-align: right;
+        float: right;
+        padding-right: 20px;
+    }
+}
+
+.nav-button-bar {
+    margin: auto;
+    width: 100%;
+    padding-left: 12vw;
+    padding-right: 12vw;
+    text-align: center;
+    overflow: visible;
+    position: absolute;
+    top: 18vh;
+    .nav-button {
+        opacity: 0.7;
+        height: 25vmin;
+        display: inline-block;
+        width: 25vmin;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5px;
+        img {
+            margin-left: auto;
+            margin-right: auto;
+            width: 25vmin;
+        }
+    }
+}
+
+body {
+    padding-top: 10vh;
+}
