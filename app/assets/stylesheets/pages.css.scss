@@ -18,11 +18,11 @@ div, body {
 }
 
 #main-title {
-  height: 21%;
+  height: 20%;
   text-align: center;
   margin: auto;
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: 0;
   bottom: 0;
   right: 0;
@@ -30,13 +30,13 @@ div, body {
     position: relative;
     margin: 0 auto 0 auto;
     h1 {
-      font-size: 9vmin;
+      font-size: 8.5vmin;
       color: rgba(222,230,255,1);
       margin: 0 auto 0 auto;
     }
     p {
       margin-bottom: 5%;
-      font-size: 8vmin;
+      font-size: 7.5vmin;
       color: rgba(150,140,150,1);
     }
   }
