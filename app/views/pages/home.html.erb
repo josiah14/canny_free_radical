@@ -2,23 +2,22 @@
     <div class='item'>
         <%= image_tag 'hn4l2m0-a.png', id: 'logo' %>
     </div>
-    <div class='item' id='contact-info'>
-        <p id='e-mail'>praenato14@gmail.com</p>
-        <p id='phone'>814-442-8281</p>
+    <div class='item' id='contact'>
+        <a href='mailto:praenato14@gmail.com'><%= image_tag 'email-icon2.png' %></a>
     </div>
 </nav>
 <div class='nav-button-bar'>
-    <div class='nav-button'>
-        <%= image_tag 'SVG/profile-white.png', id: 'about-button' %>
+    <div class='nav-button' id='about-button'>
+        <%= image_tag 'profile.png'%>
     </div>
-    <div class='nav-button'>
-        <%= image_tag 'blog-b0.png', id: 'blog-button' %>
+    <div class='nav-button' id='blog-button'>
+        <%= image_tag 'blog-icon-v2.png'%>
     </div>
-    <div class='nav-button'>
-        <%= image_tag 'portfolio.png', id: 'portfolio-button' %>
+    <div class='nav-button' id='portfolio-button'>
+        <%= image_tag 'portfolio.png'%>
     </div>
-    <div class='nav-button'>
-        <%= image_tag 'cv.png', id: 'cv-button' %>
+    <div class='nav-button' id='cv-button'>
+        <%= image_tag 'cv.png'%>
     </div>
 </div>
 <div id='main-title'>
@@ -26,6 +25,10 @@
         <h1>Software Engineer</h1>
         <p>Josiah Berkebile</p>
     </div>
-    <%= image_tag 'github.png', class: 'social-button', id: 'github-button' %>
-    <%= image_tag 'social-linkedin.png', class: 'social-button', id: 'linkedin-button' %>
+    <a href='https://github.com/josiah14'>
+        <%= image_tag 'github.png', class: 'social-button', id: 'github-button' %>
+    </a>
+    <a href='https://www.linkedin.com/pub/garrett-berkebile/9/829/29b'>
+        <%= image_tag 'social-linkedin.png', class: 'social-button', id: 'linkedin-button' %>
+    </a>
 </div>
