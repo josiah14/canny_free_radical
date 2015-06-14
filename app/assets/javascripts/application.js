@@ -6,9 +6,4 @@
 //= require angular-resource/angular-resource.min
 //= require angular-bootstrap/ui-bootstrap.min
 //= require angular-bootstrap/ui-bootstrap-tpls.min
-//= require turbolinks
 //= require_tree .
-
-var app = angular.module('ui.bootstrap.demo', ['ui.bootstrap', 'ngRoute', 'ngResource']);
-
-

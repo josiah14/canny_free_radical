@@ -1,27 +1,31 @@
-<%= render partial: 'shared/navbar' %>
-<div class='nav-button-bar'>
-    <div class='nav-button' id='about-button'>
-        <%= image_tag 'profile.png'%>
+<div ng-controller='HomeCtrl' id="{{ page }}" >
+    <%= render partial: 'shared/navbar' %>
+    <div class='nav-button-container'>
+        <div class='button' id='about-button'>
+            <%= image_tag 'profile.png' %>
+        </div>
+        <div class='button' id='blog-button'>
+            <%= image_tag 'blog-icon-v2.png' %>
+        </div>
+        <div class='button' id='portfolio-button'>
+            <%= image_tag 'portfolio.png' %>
+        </div>
+        <div class='button' id='cv-button'>
+            <%= image_tag 'cv.png' %>
+        </div>
     </div>
-    <div class='nav-button' id='blog-button'>
-        <%= image_tag 'blog-icon-v2.png'%>
+    <div id='main-title'>
+        <div>
+            <h1>Software Engineer</h1>
+            <p>Garrett Berkebile</p>
+        </div>
+        <div class='social-media'>
+            <a href='https://github.com/josiah14'>
+                <%= image_tag 'github.png', class: 'button', id: 'github-button' %>
+            </a>
+            <a href='https://www.linkedin.com/pub/garrett-berkebile/9/829/29b'>
+                <%= image_tag 'social-linkedin.png', class: 'button', id: 'linkedin-button' %>
+            </a>
+        </div>
     </div>
-    <div class='nav-button' id='portfolio-button'>
-        <%= image_tag 'portfolio.png'%>
-    </div>
-    <div class='nav-button' id='cv-button'>
-        <%= image_tag 'cv.png'%>
-    </div>
-</div>
-<div id='main-title'>
-    <div>
-        <h1>Software Engineer</h1>
-        <p>Josiah Berkebile</p>
-    </div>
-    <a href='https://github.com/josiah14'>
-        <%= image_tag 'github.png', class: 'social-button', id: 'github-button' %>
-    </a>
-    <a href='https://www.linkedin.com/pub/garrett-berkebile/9/829/29b'>
-        <%= image_tag 'social-linkedin.png', class: 'social-button', id: 'linkedin-button' %>
-    </a>
 </div>

@@ -2,8 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.home {
+#home {
   height: 100%;
+  top: 0;
+  position: fixed;
+  width: 100%;
   background: image-url('Computers.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -42,7 +45,7 @@ div, body {
   }
 }
 
-.nav-button-bar {
+.nav-button-container {
     margin: auto;
     width: 100%;
     padding-left: 13vw;
@@ -51,7 +54,7 @@ div, body {
     overflow: visible;
     position: absolute;
     top: 18vh;
-    .nav-button {
+    .button {
         opacity: 0.8;
         height: 22vmin;
         display: inline-block;
@@ -67,10 +70,16 @@ div, body {
     }
 }
 
-.social-button {
+.social-media {
     height: 10vh;
-    margin-right: 3vh;
-    margin-left: 3vh;
-    margin-bottom: 0;
+    border: 0;
+    padding: 0;
+    margin: 0;
+
+    .button {
+        height: 10vh;
+        margin-right: 3vh;
+        margin-left: 3vh;
+    } 
 }
 
