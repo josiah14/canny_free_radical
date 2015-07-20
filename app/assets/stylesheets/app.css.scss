@@ -1,11 +1,14 @@
 .navbar {
-    height: 15vh;
+    height: 12vh;
     min-height: 0;
-    background: rgba(30,20,30, 0.7);
+    background: rgba(30,20,30, 0.8);
     overflow: hidden;
     display: block;
+    text-align: center;
     #logo {
-        margin-left: 10%;
+        float: left;
+        text-align: left;
+        margin-left: 1%;
     }
 
     #title-text {
@@ -13,11 +16,26 @@
         height: 6vh;
     }
 
-    .item {
+    #nav-buttons-container {
+        display: inline-block;
+        margin: auto;
+        height: 10vh;
+        text-align: center;
         height: 12vh;
+        width: 60%;
+    }
+
+    .navbar-button {
+        padding-left: 2%;
+        padding-right: 2%;
+        opacity: 0.9;
+    }
+
+    .item {
+        height: 9vh;
         display: inline-block;
         color: white;
-        text-align: right;
+        text-align: left;
         font-size: 3vh; 
         overflow: visible;
         vertical-align: middle;
@@ -31,7 +49,7 @@
     #contact {
         text-align: right;
         float: right;
-        margin-right: 20px;
+        margin-right: 1%;
         opacity: 0.8;
     }
 }

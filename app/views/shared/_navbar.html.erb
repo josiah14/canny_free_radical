@@ -1,13 +1,15 @@
 <nav class='navbar navbar-inverse navbar-fixed-top'>
-    <div class='item'>
-        <%= image_tag 'hn4l2m0-a.png', id: 'logo' %>
+    <div class='item' id="logo">
+        <a href="/"><%= image_tag 'hn4l2m0-a.png' %></a>
     </div>
     <% if local_assigns[:nav_buttons] %>
-        <% nav_buttons.each do |nav_button| %>
-            <div class='item navbar-button' id=<%= nav_button %>>
-                <%= image_tag '#{nav_button}.png', id: '#{nav_button}' %>
-            </div>
-        <% end %>
+        <div id="nav-buttons-container">
+            <% nav_buttons.each do |nav_button| %>
+                <div class='item navbar-button' id=<%= nav_button %>>
+                    <%= image_tag "#{nav_button}.png", id: "#{nav_button}" %>
+                </div>
+            <% end %>
+        </div>
     <% end %>
     <div class='item' id='contact'>
         <a href='mailto:praenato14@gmail.com'><%= image_tag 'email-icon2.png' %></a>
