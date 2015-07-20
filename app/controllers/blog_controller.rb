@@ -1,6 +1,11 @@
 class BlogController < ApplicationController
   def index
     @last_post = Post.order(:created_at).last
-    @posts = Post.order(:created_at).map { |post| { title: post.title, date: post.created_at } }
+    @posts = Post.order(:created_at).map do |post|
+      {
+        title: post.title,
+        date: Date.parse(post.created_at.httpdate).to_s
+      }
+    end
   end
 end
