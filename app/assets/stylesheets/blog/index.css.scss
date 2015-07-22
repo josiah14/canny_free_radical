@@ -23,13 +23,12 @@
         list-style: none;
         li {
             float: left;
-            margin: 0 5px 0 0;
+            margin: 0 2px 0 0;
             padding: 0;
             color: white;
             width: 25vh;
             height: 100%;
-            border: 1px;
-            border-color: black;
+            background-color: black;
             div {
                 height: 5vh;
                 display: block;

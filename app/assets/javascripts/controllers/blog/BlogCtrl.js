@@ -7,6 +7,5 @@ app.controller('BlogCtrl', ['$scope', function($scope) {
                   , touchDragging: true
                   , releaseSwing: true
                   },
-        $postsList = new Sly("#posts-list", options).init();
-
+    $postsList = new Sly("#posts-list", options).init();
 }]);
