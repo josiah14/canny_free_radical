@@ -1,16 +1,22 @@
-<div ng-controller='BlogCtrl' class='main-container' id="{{ page }}">
-    <%= render partial: 'shared/navbar', locals: {nav_buttons: ['cv', 'profile', 'portfolio']} %>
+<div ng-controller='BlogCtrl'
+     class='main-container' id="{{ page }}"
+     ng-style="{'background-image':'url(' + activePost.image_url + ')'}">
+    <%= render partial: 'shared/navbar', locals: { nav_buttons: ['cv', 'profile', 'portfolio'] } %>
     <div id="blog-body-container">
-        <h1><%= @last_post.title %></h1>
+        <h1>{{ activePost.title }}</h1>
     </div>
-    <div class="frame" id="posts-list">
-        <ul class="slidee">
-            <%= @posts.each do |post| %>
-                <li style="background-image: image-url(#{post.cover_image})">
-                    <div><%= post[:title] %></div>
-                    <div><%= post[:date] %></div>
-                </li>
-            <% end %>
-        </ul>
+    <div id="posts-list-wrapper">
+        <div class="frame" id="posts-list">
+            <ul class="slidee">
+                <%= @posts.each do |post| %>
+                    <li>
+                        <div class="title"><%= post[:title] %></div>
+                        <div class="date"><%= post[:date] %></div>
+                        <%= image_tag post[:cover_image] %>
+                    </li>
+                    <li><div></div></li>
+                <% end %>
+            </ul>
+        </div>
     </div>
 </div>

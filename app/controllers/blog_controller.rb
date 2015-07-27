@@ -4,7 +4,8 @@ class BlogController < ApplicationController
     @posts = Post.order(:created_at).reverse.map do |post|
       {
         title: post.title,
-        date: Date.parse(post.created_at.httpdate).to_s
+        date: Date.parse(post.created_at.httpdate).to_s,
+        cover_image: post.cover_image
       }
     end
   end

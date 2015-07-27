@@ -1,5 +1,5 @@
 #blog {
-    background: image-url('eleventh-post.jpg') no-repeat center center fixed;
+    background: no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -15,24 +15,49 @@
     position: fixed;
     bottom: 0;
     background-color: rgba(30, 20, 30, 0.8);
-    opacity: 0.7;
+    opacity: 0.85;
     .slidee {
         margin: 0;
         padding: 0;
         height: 100%;
+        width: 100%;
         list-style: none;
         li {
             float: left;
-            margin: 0 2px 0 0;
+            margin: 0 0px 0 2px;
             padding: 0;
             color: white;
-            width: 25vh;
             height: 100%;
+            width: auto;
             background-color: black;
+            word-wrap: break-word;
+            overflow-x: hidden;
+            text-align: center;
+            img {
+                height: 100%;
+                width: auto;
+            }
             div {
+                position: absolute;
+                width: auto;
                 height: 5vh;
                 display: block;
+                color: white;
+                text-shadow:
+                    -2px -2px 3px #000,
+                    2px -2px 3px #000,
+                    -2px 2px 3px #000,
+                    2px 2px 3px #000;
             }
+            .title {
+                top: 0;
+                font-size: 2.5vh;
+            }
+            .date {
+                bottom: 0;
+                font-size: 2.5vh;
+            }
+
         }
     }
 }
@@ -48,6 +73,12 @@
     right: 0;
 
     h1 {
-        color: rgba(222,230,255,1);
+        color: white;
+        text-shadow:
+            -1px -1px 5px #000,
+            1px -1px 5px #000,
+            -1px 1px 5px #000,
+            1px 1px 5px #000;
+        font-size: 8.5vmin;
     }
 }
