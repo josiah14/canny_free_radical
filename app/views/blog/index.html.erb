@@ -9,13 +9,13 @@
         <div class="frame" id="posts-list">
             <ul class="slidee">
                 <%= @posts.each do |post| %>
-                    <li>
+                    <li style=<%="background-image:url(/assets/" + post[:cover_image]  + ")"%> >
                         <div class="title"><%= post[:title] %></div>
                         <div class="date"><%= post[:date] %></div>
-                        <%= image_tag post[:cover_image] %>
+                        <%= image_tag post[:cover_image], hidden: true %>
                     </li>
-                    <li><div></div></li>
                 <% end %>
+                <li id="end"></li>
             </ul>
         </div>
     </div>

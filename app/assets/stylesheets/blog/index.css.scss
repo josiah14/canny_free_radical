@@ -23,23 +23,22 @@
         width: 100%;
         list-style: none;
         li {
+            background: no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
             float: left;
-            margin: 0 0px 0 2px;
+            margin: 0 0px 0 3px;
             padding: 0;
             color: white;
             height: 100%;
-            width: auto;
+            width: 32vh;
             background-color: black;
             word-wrap: break-word;
             overflow-x: hidden;
             text-align: center;
-            img {
-                height: 100%;
-                width: auto;
-            }
             div {
-                position: absolute;
-                width: auto;
                 height: 5vh;
                 display: block;
                 color: white;
@@ -51,13 +50,28 @@
             }
             .title {
                 top: 0;
-                font-size: 2.5vh;
+                font-size: 3vh;
             }
             .date {
-                bottom: 0;
-                font-size: 2.5vh;
+                position: fixed;
+                text-align: center;
+                width: 32vh;
+                height: 5vh;
+                bottom: 1vmin;
+                bottom: 1vm;
+                font-size: 4vh;
             }
-
+        }
+        @media (max-height: 310px) and (orientation: landscape) {
+            li {
+                width: 34vh;
+                .date {
+                    display: none;
+                }
+            }
+        }
+        #end {
+            width: 5px;
         }
     }
 }
