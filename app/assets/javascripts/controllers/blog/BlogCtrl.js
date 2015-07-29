@@ -41,7 +41,7 @@ app.controller('BlogCtrl', ['$scope', function($scope) {
                     };
                     setTimeout(function () {
                         postsListSly = new Sly("#posts-list", slyOptions, slyEvents).init();
-                    }, 500);
+                    }, 1000);
                 }
             };
         },
