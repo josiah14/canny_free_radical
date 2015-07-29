@@ -18,18 +18,18 @@ posts_list = [
             "I'm writing something senseless and whimsical here. lah-dee-dah-doo-day.  This is a short post, but hey, at least it has a \n#Header"
           ],
           [
-            "Third Post",
-            "third-post.png",
-            "third post text goes here..."
+            "An Introduction to Prolog",
+            "spock-logic.jpg",
+            "Prolog post text goes here..."
           ],
           [
-            "Fourth Post",
-            "fourth-post.png",
+            "An Overview of the Phoenix Framework",
+            "phoenixframework.png",
             "fourth post text goes here..."
           ],
           [
-            "Fifth Post",
-            "fifth-post.png",
+            "A First Glance at ChainFlow",
+            "chainflow-glance.png",
             "fifth post text goes here..."
           ],
           [
@@ -38,24 +38,29 @@ posts_list = [
             "sixth post text goes here..."
           ],
           [
-            "Seventh Post",
+            "This is the Seventh Post, which is about Monads (again)!",
             "seventh-post.png",
             "seventh post text goes here..."
           ],
           [
             "Eighth Post",
-            "eighth-post.png",
+            "eighth-post.jpg",
             "eighth post text goes here..."
           ],
           [
             "Nineth Post",
-            "nineth-post.png",
+            "nineth-post.jpg",
             "nineth post text goes here..."
           ],
           [
-            "Tenth Post",
-            "tenth-post.png",
+            "About Atomicity",
+            "tenth-post.jpg",
             "tenth post text goes here..."
+          ],
+          [
+            "Elm's Time Travelling Debugger Examined",
+            "tardis.jpg",
+            "Elm time travelling post text goes here..."
           ]
         ]
 
