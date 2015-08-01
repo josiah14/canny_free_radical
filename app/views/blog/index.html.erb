@@ -1,22 +1,28 @@
-<div ng-controller='BlogCtrl'
-     class='main-container' id="{{ page }}"
-     ng-style="{'background-image':'url(' + activePost.image_url + ')'}">
-    <%= render partial: 'shared/navbar', locals: { nav_buttons: ['cv', 'profile', 'portfolio'] } %>
-    <div id="blog-body-container">
-        <h1>{{ activePost.title }}</h1>
-    </div>
-    <div id="posts-list-wrapper">
-        <div class="frame" id="posts-list">
-            <ul class="slidee">
-                <%= @posts.each do |post| %>
-                    <li style=<%="background-image:url(" + asset_path(post[:cover_image])  + ")"%> >
-                        <div class="title"><%= post[:title] %></div>
-                        <div class="date"><%= post[:date] %></div>
-                        <%= image_tag post[:cover_image], hidden: true %>
-                    </li>
-                <% end %>
-                <li id="end"></li>
-            </ul>
+<div ng-controller='BlogCtrl' class='main-container' id="{{ page }}">
+    <div class="hard" ng-style="{'background-image':'url(' + activePost.image_url + ')'}">
+        <%= render partial: 'shared/navbar', locals: { nav_buttons: ['cv', 'profile', 'portfolio'] } %>
+        <div id="blog-body-container">
+            <h1>{{ activePost.title }}</h1>
+            <div class="btn-read"><h2>Read -></h2></div>
+        </div>
+        <div id="posts-list-wrapper">
+            <div class="scrollbar">
+                <div id="blog-later">  <  </div>
+                <div id="blog-posts">Posts</div>
+                <div id="blog-earlier">  >  </div>
+            </div>
+            <div class="frame" id="posts-list">
+                <ul class="slidee">
+                    <%= @posts.each do |post| %>
+                        <li style=<%="background-image:url(" + asset_path(post[:cover_image])  + ")"%> >
+                            <div class="title"><%= post[:title] %></div>
+                            <div class="date"><%= post[:date] %></div>
+                            <%= image_tag post[:cover_image], hidden: true %>
+                        </li>
+                    <% end %>
+                    <li id="end"></li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>

@@ -7,4 +7,6 @@ asset 'angular-route'
 asset 'angular-resource'
 asset 'bootstrap-sass-official'
 asset 'angular-bootstrap'
+asset 'sly', '~> 1.5.1'
+asset 'turnjs'
 

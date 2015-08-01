@@ -15,11 +15,16 @@ app.controller('BlogCtrl', ['$scope', function($scope) {
         },
         SlyCtrl = function () {
             var slyOptions = { horizontal: true
-                             , itemNav: 'centered'
+                             , itemNav: 'forceCentered'
                              , mouseDragging: true
                              , touchDragging: true
                              , releaseSwing: true
+                             , elasticBounds: true
                              , activateOn: 'click'
+                             , prev: '#blog-later'
+                             , next: '#blog-earlier'
+                               , smart: true
+                               , speed: 1000
                              },
                 activatePost = function () {
                     var $activePost = $slySlidee.children('.active').first();
@@ -34,13 +39,16 @@ app.controller('BlogCtrl', ['$scope', function($scope) {
 
             return {
                 resetPostsList: function () {
-                    var $postsListFrame = $('#posts-list').remove();
+                    var activeItem = postsListSly.rel.activeItem || 0
+                      , $postsListFrame = $('#posts-list').remove();
+
                     $('#posts-list-wrapper').append($postsListFrame);
                     if (postsListSly) {
                         postsListSly.destroy();
                     };
                     setTimeout(function () {
                         postsListSly = new Sly("#posts-list", slyOptions, slyEvents).init();
+                        postsListSly.activate(activeItem);
                     }, 500);
                 }
             };

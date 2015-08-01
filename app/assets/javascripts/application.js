@@ -6,4 +6,6 @@
 //= require angular-resource/angular-resource.min
 //= require angular-bootstrap/ui-bootstrap.min
 //= require angular-bootstrap/ui-bootstrap-tpls.min
+//= require turnjs/turn.min
+//= require sly/dist/sly.min
 //= require_tree .

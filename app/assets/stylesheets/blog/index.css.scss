@@ -1,4 +1,4 @@
-#blog {
+.hard {
     background: no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -6,9 +6,54 @@
     background-size: cover;
 }
 
+.scrollbar {
+    width: 100%;
+    height: 3%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    position: fixed;
+    bottom: 21%;
+    color: white;
+    z-index: 1;
+    div {
+        display: inline-block;
+        margin: 0 4% 0 4%;
+        font-size: 3vh;
+        height: 4.5vh;
+        max-height: 30px;
+    }
+    #blog-earlier, #blog-later {
+        border-color: white;
+        border: 1px solid;
+        text-align: center;
+        padding: 0 20px 0px 20px;
+        line-height: 25px;
+    }
+    @media (max-height: 770px) and (min-height: 500px) and (orientation: portrait) {
+        #blog-earlier, #blog-later {
+            line-height: 23px;
+            height: 4vh;
+        }
+    }
+    @media (max-height: 500px) and (orientation: landscape) {
+        #blog-earlier, #blog-later {
+            line-height: 15px;
+            height: 4.5vh;
+        }
+    }
+    @media (max-height: 500px) and (orientation: portrait) {
+        #blog-earlier, #blog-later {
+            line-height: 15px;
+            height: 4.5vh;
+        }
+    }
+}
+
+
 .frame {
     width: 100%;
-    height: 20%;
+    height: 24%;
     padding: 0;
     margin: 0;
     text-align: center;
@@ -16,12 +61,14 @@
     bottom: 0;
     background-color: rgba(30, 20, 30, 0.8);
     opacity: 0.85;
+    z-index: 0;
     .slidee {
         margin: 0;
-        padding: 0;
+        padding: 5vh 0 1.5vh 0;
         height: 100%;
         width: 100%;
         list-style: none;
+        color: rgba(30, 20, 30, 0);
         li {
             background: no-repeat center center;
             -webkit-background-size: cover;
@@ -29,7 +76,7 @@
             -o-background-size: cover;
             background-size: cover;
             float: left;
-            margin: 0 0px 0 3px;
+            margin: 0 1.5vh 0 1.5vh;
             padding: 0;
             color: white;
             height: 100%;
@@ -57,16 +104,23 @@
                 text-align: center;
                 width: 32vh;
                 height: 5vh;
-                bottom: 1vmin;
-                bottom: 1vm;
+                bottom: 2vh;
                 font-size: 4vh;
             }
         }
-        @media (max-height: 310px) and (orientation: landscape) {
+        @media (max-height: 320px) and (orientation: landscape) {
+            .slidee {
+                padding-top: 3%;
+            }
             li {
+                text-align: center;
                 width: 34vh;
                 .date {
                     display: none;
+                }
+                .title {
+                    margin-top: 1vh;
+                    display: absolute;
                 }
             }
         }
@@ -76,23 +130,69 @@
     }
 }
 
+h2 {
+    font-size: 5vmax;
+    height: auto;
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: white;
+    text-shadow:
+        -1px -1px 5px #000,
+        1px -1px 5px #000,
+        -1px 1px 5px #000,
+        1px 1px 5px #000;
+    font-size: 8.5vmin;
+}
+
 #blog-body-container {
-    height: 20%;
+    height: 100%;
     text-align: center;
     margin: auto;
     position: absolute;
-    top: 0;
+    top: 80%;
     left: 0;
-    bottom: 0;
+    bottom: 40vh;
     right: 0;
 
-    h1 {
-        color: white;
-        text-shadow:
-            -1px -1px 5px #000,
-            1px -1px 5px #000,
-            -1px 1px 5px #000,
-            1px 1px 5px #000;
-        font-size: 8.5vmin;
+    .btn-read {
+        display: inline-block;
+        margin-top: 5vh;
+        background-color: white;
+        height: 6vmax;
+        width: auto;
+        padding: 0 1vmax 0 1vmax;
+        border-radius: 2vmax;
+        border-color: black;
+        border: 2px solid;
+    }
+}
+
+@media (min-height: 730px) , (min-width: 730px) {
+    #blog-body-container {
+        .btn-read {
+            height: 40px;
+        }
+    }
+    h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) , (max-width: 320px) and (orientation: portrait) {
+    .scrollbar {
+        bottom: 21%;
+        div {
+            font-size: 5vh;
+        }
+    }
+    .frame {
+        height: 25%;
+        .slidee {
+            padding: 8vh 0 1.5vh 0;
+        }
     }
 }
