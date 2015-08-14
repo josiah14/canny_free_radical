@@ -25,6 +25,8 @@ app.controller('BlogCtrl', ['$scope', function($scope) {
                              , next: '#blog-earlier'
                                , smart: true
                                , speed: 1000
+                               , swingSpeed: 0.08
+                               , easing: 'swing'
                              },
                 activatePost = function () {
                     var $activePost = $slySlidee.children('.active').first();
@@ -49,11 +51,42 @@ app.controller('BlogCtrl', ['$scope', function($scope) {
                     setTimeout(function () {
                         postsListSly = new Sly("#posts-list", slyOptions, slyEvents).init();
                         postsListSly.activate(activeItem);
-                    }, 500);
+                        console.log('reset');
+                    }, 1000);
                 }
             };
         },
-        slyCtrl = new SlyCtrl();
+        slyCtrl = new SlyCtrl(),
+        slideInText = function () {
+            $('#blog-main').animate({'margin-left':'-=100vw'}, 1000);
+            setTimeout(function () {
+                $('.back').hide().fadeIn('fast');
+            }, 1000);
+        },
+        backToCover = function () {
+            $('#blog-main').animate({'margin-left':'+=100vw'}, 1000);
+            $('.back').fadeOut('fast');
+            $('#blog').css({
+                transform: 'scale(0.95)'
+            });
+            setTimeout(function () {
+                $('blog-main').stop(true, true);
+            }, 1000);
+            setTimeout(function () {
+                slyCtrl.resetPostsList();
+                $('#blog').css({
+                    transform: 'scale(1)'
+                });
+            }, 2000);
+            // slyCtrl.resetPostsList();
+            // setTimeout(function () {
+            //     $('#blog-main').stop(true, true);
+            //     slyCtrl.resetPostsList();
+            // }, 1000);
+        },
+        updateButton = function () {
+            $('.back').hide().show();
+        };
 
     $scope.page = "blog";
     activateLatestPost();
@@ -64,4 +97,8 @@ app.controller('BlogCtrl', ['$scope', function($scope) {
     // change and browser resize.
     window.addEventListener('orientationchange', slyCtrl.resetPostsList);
     window.addEventListener('resize', slyCtrl.resetPostsList);
+
+    $('.btn.read').on('click', slideInText);
+    $('.btn.back').on('click', backToCover);
+    $('#blog-main').on('scroll', updateButton);
 }]);

@@ -1,9 +1,67 @@
 .hard {
-    background: no-repeat center center fixed;
+    width: 100vw;
+    position: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-attachment: absolute;
+}
+
+#blog-cover {
+    float: left;
+}
+
+.btn-primary.back {
+        display: inline-block;
+        float: left;
+        z-index: 200;
+        width: auto;
+        border-radius: 2vmax;
+        text-align: center;
+        vertical-align: middle;
+        border-color: black;
+        border: 2px solid;
+}
+
+#blog-text-content {
+    z-index: 0;
+}
+
+.bottom-bar {
+    width: 100%;
+    display: block;
+    max-height: 45px;
+    z-index: 200;
+    bottom: 5%;
+    position: fixed;
+}
+
+
+#blog-text {
+    width: 100vw;
+    height: auto;
+    padding: 20px;
+    z-index: 0;
+    padding-top: 0;
+    margin-left: 50%;
+    display:inline-block;
+}
+
+#blog-main {
+    width: 200vw;
+    overflow-y: scroll;
+}
+
+#blog {
+    width: 200vw;
+    overflow: auto;
+}
+
+.navbar {
+    position: absolute;
 }
 
 .scrollbar {
@@ -12,7 +70,7 @@
     padding: 0;
     margin: 0;
     text-align: center;
-    position: fixed;
+    position: absolute;
     bottom: 21%;
     color: white;
     z-index: 1;
@@ -57,7 +115,7 @@
     padding: 0;
     margin: 0;
     text-align: center;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     background-color: rgba(30, 20, 30, 0.8);
     opacity: 0.85;
@@ -100,7 +158,7 @@
                 font-size: 3vh;
             }
             .date {
-                position: fixed;
+                position: absolute;
                 text-align: center;
                 width: 32vh;
                 height: 5vh;
@@ -148,6 +206,10 @@ h1 {
     font-size: 8.5vmin;
 }
 
+#blog-text {
+    z-index: 100;
+}
+
 #blog-body-container {
     height: 100%;
     text-align: center;
@@ -158,7 +220,7 @@ h1 {
     bottom: 40vh;
     right: 0;
 
-    .btn-read {
+    .read {
         display: inline-block;
         margin-top: 5vh;
         background-color: white;
@@ -173,12 +235,15 @@ h1 {
 
 @media (min-height: 730px) , (min-width: 730px) {
     #blog-body-container {
-        .btn-read {
+        .read {
             height: 40px;
         }
     }
     h2 {
         font-size: 30px;
+    }
+    .btn.back {
+        height: 40px;
     }
 }
 
