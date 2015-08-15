@@ -8623,35 +8623,158 @@ button.close {
   overflow-y: hidden;
 }
 /* line 1, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
-#blog {
-  background: no-repeat center center fixed;
+.hard {
+  width: 100vw;
+  position: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-attachment: absolute;
 }
 
-/* line 9, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
-.frame {
+/* line 13, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+#blog-cover {
+  float: left;
+}
+
+/* line 17, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+.btn-primary.back {
+  display: inline-block;
+  float: left;
+  z-index: 200;
+  width: auto;
+  border-radius: 2vmax;
+  text-align: center;
+  vertical-align: middle;
+  border-color: black;
+  border: 2px solid;
+}
+
+/* line 29, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+#blog-text-content {
+  z-index: 0;
+  display: block;
+}
+
+/* line 34, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+.bottom-bar {
   width: 100%;
-  height: 20%;
+  display: block;
+  max-height: 45px;
+  z-index: 200;
+  bottom: 3%;
+  position: fixed;
+}
+
+/* line 44, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+#blog-text {
+  width: 100vw;
+  height: auto;
+  padding: 20px;
+  z-index: 0;
+  padding-top: 0;
+  margin-left: 50%;
+  display: inline-block;
+}
+/* line 52, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+#blog-text #post-blog-text-spacer {
+  display: block;
+  height: 40px;
+}
+
+/* line 58, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+#blog-main {
+  width: 200vw;
+  overflow-y: scroll;
+}
+
+/* line 63, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+#blog {
+  width: 200vw;
+  overflow: auto;
+}
+
+/* line 68, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+.navbar {
+  position: absolute;
+}
+
+/* line 72, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+.scrollbar {
+  width: 100%;
+  height: 3%;
   padding: 0;
   margin: 0;
   text-align: center;
-  position: fixed;
+  position: absolute;
+  bottom: 21%;
+  color: white;
+  z-index: 1;
+}
+/* line 82, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+.scrollbar div {
+  display: inline-block;
+  margin: 0 4% 0 4%;
+  font-size: 3vh;
+  height: 4.5vh;
+  max-height: 30px;
+}
+/* line 89, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+.scrollbar #blog-earlier, .scrollbar #blog-later {
+  border-color: white;
+  border: 1px solid;
+  text-align: center;
+  padding: 0 20px 0px 20px;
+  line-height: 25px;
+}
+@media (max-height: 770px) and (min-height: 500px) and (orientation: portrait) {
+  /* line 97, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+  .scrollbar #blog-earlier, .scrollbar #blog-later {
+    line-height: 23px;
+    height: 4vh;
+  }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  /* line 103, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+  .scrollbar #blog-earlier, .scrollbar #blog-later {
+    line-height: 15px;
+    height: 4.5vh;
+  }
+}
+@media (max-height: 500px) and (orientation: portrait) {
+  /* line 109, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+  .scrollbar #blog-earlier, .scrollbar #blog-later {
+    line-height: 15px;
+    height: 4.5vh;
+  }
+}
+
+/* line 117, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+.frame {
+  width: 100%;
+  height: 24%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  position: absolute;
   bottom: 0;
   background-color: rgba(30, 20, 30, 0.8);
   opacity: 0.85;
+  z-index: 0;
 }
-/* line 19, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+/* line 128, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
 .frame .slidee {
   margin: 0;
-  padding: 0;
+  padding: 5vh 0 1.5vh 0;
   height: 100%;
   width: 100%;
   list-style: none;
+  color: rgba(30, 20, 30, 0);
 }
-/* line 25, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+/* line 135, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
 .frame .slidee li {
   background: no-repeat center center;
   -webkit-background-size: cover;
@@ -8659,7 +8782,7 @@ button.close {
   -o-background-size: cover;
   background-size: cover;
   float: left;
-  margin: 0 0px 0 3px;
+  margin: 0 1.5vh 0 1.5vh;
   padding: 0;
   color: white;
   height: 100%;
@@ -8669,59 +8792,134 @@ button.close {
   overflow-x: hidden;
   text-align: center;
 }
-/* line 41, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+/* line 151, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
 .frame .slidee li div {
   height: 5vh;
   display: block;
   color: white;
   text-shadow: -2px -2px 3px #000, 2px -2px 3px #000, -2px 2px 3px #000, 2px 2px 3px #000;
 }
-/* line 51, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+/* line 161, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
 .frame .slidee li .title {
   top: 0;
   font-size: 3vh;
+  height: 100%;
 }
-/* line 55, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+/* line 166, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
 .frame .slidee li .date {
-  position: fixed;
+  position: absolute;
   text-align: center;
   width: 32vh;
   height: 5vh;
-  bottom: 1vmin;
-  bottom: 1vm;
+  bottom: 2vh;
   font-size: 4vh;
 }
-@media (max-height: 310px) and (orientation: landscape) {
-  /* line 66, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+@media (max-height: 320px) and (orientation: landscape) {
+  /* line 176, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+  .frame .slidee .slidee {
+    padding-top: 3%;
+  }
+  /* line 179, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
   .frame .slidee li {
+    text-align: center;
     width: 34vh;
   }
-  /* line 68, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+  /* line 182, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
   .frame .slidee li .date {
     display: none;
   }
+  /* line 185, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+  .frame .slidee li .title {
+    margin-top: 1vh;
+    display: absolute;
+  }
 }
-/* line 73, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+/* line 191, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
 .frame .slidee #end {
   width: 5px;
 }
 
-/* line 79, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
-#blog-body-container {
-  height: 20%;
-  text-align: center;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+/* line 197, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+h2 {
+  font-size: 9vmin;
+  font-size: 9vm;
+  height: auto;
+  width: auto;
+  margin: 0;
+  padding: 0;
 }
-/* line 89, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
-#blog-body-container h1 {
+
+/* line 206, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+h1 {
   color: white;
   text-shadow: -1px -1px 5px #000, 1px -1px 5px #000, -1px 1px 5px #000, 1px 1px 5px #000;
   font-size: 8.5vmin;
+}
+
+/* line 216, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+#blog-text {
+  z-index: 100;
+}
+
+/* line 220, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+#blog-body-container {
+  height: 100%;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  top: 80%;
+  left: 0;
+  bottom: 40vh;
+  right: 0;
+}
+/* line 230, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+#blog-body-container .read {
+  display: inline-block;
+  margin-top: 5vh;
+  background-color: white;
+  height: 10vmin;
+  height: 10vm;
+  width: auto;
+  padding: 0 1vmax 0 1vmax;
+  border-radius: 2vmax;
+  border-color: black;
+  border: 2px solid;
+}
+
+@media (min-height: 730px), (min-width: 730px) {
+  /* line 246, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+  #blog-body-container .read {
+    height: 40px;
+  }
+
+  /* line 250, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+  h2 {
+    font-size: 30px;
+  }
+
+  /* line 253, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+  .btn.back {
+    height: 40px;
+  }
+}
+@media (max-height: 500px) and (orientation: landscape), (max-width: 320px) and (orientation: portrait) {
+  /* line 259, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+  .scrollbar {
+    bottom: 21%;
+  }
+  /* line 261, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+  .scrollbar div {
+    font-size: 5vh;
+  }
+
+  /* line 265, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+  .frame {
+    height: 25%;
+  }
+  /* line 267, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/blog/index.css.scss */
+  .frame .slidee {
+    padding: 8vh 0 1.5vh 0;
+  }
 }
 /* line 5, /home/josiah/Development/canny_free_radical/app/assets/stylesheets/pages.css.scss */
 div, body {

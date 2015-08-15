@@ -53,36 +53,25 @@ app.controller('BlogCtrl', ['$scope', function($scope) {
                         postsListSly.activate(activeItem);
                         console.log('reset');
                     }, 1000);
-                }
+                },
+                slyObj: postsListSly
             };
         },
         slyCtrl = new SlyCtrl(),
         slideInText = function () {
             $('#blog-main').animate({'margin-left':'-=100vw'}, 1000);
+
+            // If I don't do this, the button doesn't show up unless you resize
+            // the screen or change the orientation of the device
             setTimeout(function () {
-                $('.back').hide().fadeIn('fast');
+                $('.bottom-bar').hide().fadeIn('fast');
             }, 1000);
         },
         backToCover = function () {
             $('#blog-main').animate({'margin-left':'+=100vw'}, 1000);
-            $('.back').fadeOut('fast');
-            $('#blog').css({
-                transform: 'scale(0.95)'
-            });
-            setTimeout(function () {
-                $('blog-main').stop(true, true);
-            }, 1000);
-            setTimeout(function () {
-                slyCtrl.resetPostsList();
-                $('#blog').css({
-                    transform: 'scale(1)'
-                });
-            }, 2000);
-            // slyCtrl.resetPostsList();
-            // setTimeout(function () {
-            //     $('#blog-main').stop(true, true);
-            //     slyCtrl.resetPostsList();
-            // }, 1000);
+
+            // If you don't fade-out the entire bar, it overlaps the posts-list and prevents scrolling
+            $('.bottom-bar').fadeOut('fast');
         },
         updateButton = function () {
             $('.back').hide().show();

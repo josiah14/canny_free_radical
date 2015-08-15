@@ -28,6 +28,7 @@
 
 #blog-text-content {
     z-index: 0;
+    display: block;
 }
 
 .bottom-bar {
@@ -35,7 +36,7 @@
     display: block;
     max-height: 45px;
     z-index: 200;
-    bottom: 5%;
+    bottom: 3%;
     position: fixed;
 }
 
@@ -48,6 +49,10 @@
     padding-top: 0;
     margin-left: 50%;
     display:inline-block;
+    #post-blog-text-spacer {
+        display: block;
+        height: 40px;
+    }
 }
 
 #blog-main {
@@ -156,6 +161,7 @@
             .title {
                 top: 0;
                 font-size: 3vh;
+                height: 100%;
             }
             .date {
                 position: absolute;
@@ -189,7 +195,8 @@
 }
 
 h2 {
-    font-size: 5vmax;
+    font-size: 9vmin;
+    font-size: 9vm;
     height: auto;
     width: auto;
     margin: 0;
@@ -224,7 +231,8 @@ h1 {
         display: inline-block;
         margin-top: 5vh;
         background-color: white;
-        height: 6vmax;
+        height: 10vmin;
+        height: 10vm;
         width: auto;
         padding: 0 1vmax 0 1vmax;
         border-radius: 2vmax;
