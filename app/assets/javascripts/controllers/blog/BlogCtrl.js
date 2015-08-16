@@ -1,4 +1,4 @@
-app.controller('BlogCtrl', ['$scope', function($scope) {
+app.controller('BlogCtrl', ['$scope', function ($scope) {
     var $slySlidee = $('#posts-list > .slidee'),
         getPostImageUrl = function ($el) {
             return $el.children('img').first().attr('src');
@@ -23,10 +23,10 @@ app.controller('BlogCtrl', ['$scope', function($scope) {
                              , activateOn: 'click'
                              , prev: '#blog-later'
                              , next: '#blog-earlier'
-                               , smart: true
-                               , speed: 1000
-                               , swingSpeed: 0.08
-                               , easing: 'swing'
+                             , smart: true
+                             , speed: 1000
+                             , swingSpeed: 0.08
+                             , easing: 'swing'
                              },
                 activatePost = function () {
                     var $activePost = $slySlidee.children('.active').first();
@@ -78,6 +78,7 @@ app.controller('BlogCtrl', ['$scope', function($scope) {
         };
 
     $scope.page = "blog";
+    hljs.initHighlightingOnLoad();
     activateLatestPost();
     slyCtrl.resetPostsList();
 
@@ -87,7 +88,8 @@ app.controller('BlogCtrl', ['$scope', function($scope) {
     window.addEventListener('orientationchange', slyCtrl.resetPostsList);
     window.addEventListener('resize', slyCtrl.resetPostsList);
 
-    $('.btn.read').on('click', slideInText);
-    $('.btn.back').on('click', backToCover);
+    $('.btn.read').on('click touch', slideInText);
+    $('.btn.back').on('click touch', backToCover);
+    // If you don't refresh the button while scrolling, it 'sticks' on mobile devices.
     $('#blog-main').on('scroll', updateButton);
 }]);

@@ -7,5 +7,9 @@
 //= require angular-resource/angular-resource.min
 //= require angular-bootstrap/ui-bootstrap.min
 //= require angular-bootstrap/ui-bootstrap-tpls.min
+//= require marked/marked.min
+//= require angular-marked/angular-marked.min
+//= require highlightjs/highlight.pack.min
+//= require angular-highlightjs/angular-highlightjs.min
 //= require sly/dist/sly.min
 //= require_tree .
