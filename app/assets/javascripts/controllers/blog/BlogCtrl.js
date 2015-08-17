@@ -51,7 +51,6 @@ app.controller('BlogCtrl', ['$scope', function ($scope) {
                     setTimeout(function () {
                         postsListSly = new Sly("#posts-list", slyOptions, slyEvents).init();
                         postsListSly.activate(activeItem);
-                        console.log('reset');
                     }, 1000);
                 },
                 slyObj: postsListSly
@@ -92,4 +91,7 @@ app.controller('BlogCtrl', ['$scope', function ($scope) {
     $('.btn.back').on('click touch', backToCover);
     // If you don't refresh the button while scrolling, it 'sticks' on mobile devices.
     $('#blog-main').on('scroll', updateButton);
+    $('.hard').on('touchmove', function (e) {
+        console.log('moved');
+    });
 }]);
