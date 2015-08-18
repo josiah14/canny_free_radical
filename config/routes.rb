@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'portfolio' => 'portfolio#index'
 
   get 'blog' => 'blog#index'
+  get 'blog/:id' => 'blog#show'
 
   get 'profile' => 'profile#index'
 
