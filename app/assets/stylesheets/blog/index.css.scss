@@ -14,6 +14,10 @@
     float: left;
 }
 
+.hljs-comment {
+    color: #006B00;
+}
+
 .btn-primary.back {
         display: inline-block;
         float: left;
@@ -39,6 +43,9 @@
     position: fixed;
 }
 
+pre code {
+    /* background-color: #232323; */
+}
 
 #blog-text {
     width: 100vw;

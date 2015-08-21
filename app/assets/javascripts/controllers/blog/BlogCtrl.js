@@ -43,7 +43,6 @@ app.controller('BlogCtrl', function ($scope, $http) {
                                 content: res.data.content,
                                 title: getPostTitle($activePost)
                             };
-                            hljs.initHighlighting();
                         }, function (err) {
                             console.log(err);
                         });
@@ -93,7 +92,6 @@ app.controller('BlogCtrl', function ($scope, $http) {
         };
 
     $scope.page = "blog";
-    hljs.initHighlightingOnLoad();
     activateLatestPost();
     slyCtrl.resetPostsList();
 
