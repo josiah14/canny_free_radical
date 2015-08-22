@@ -1,23 +1,19 @@
 app.controller('BlogCtrl', function ($scope, $http) {
     var $slySlidee = $('#posts-list > .slidee'),
-        getPostImageUrl = function ($el) {
-            return $el.children('img').first().attr('src');
-        },
-        getPostTitle = function ($el) {
-            return $el.children('.title').first().text();
-        },
-        activateLatestPost = function () {
-            var $latestPost = $slySlidee.children('li').first();
-            $http.get('blog/' + $latestPost.attr('post'))
+        activatePost = function ($el) {
+            $http.get('blog/' + $el.attr('post'))
                 .then(function (res) {
                     $scope.activePost = {
                         image_url: res.data.image,
                         content: res.data.content,
-                        title: getPostTitle($latestPost)
+                        title: $el.children('.title').first().text()
                     };
                 }, function (err) {
                     console.log(err);
                 });
+        },
+        activateLatestPost = function () {
+            activatePost($slySlidee.children('li').first());
         },
         SlyCtrl = function () {
             var slyOptions = { horizontal: true
@@ -34,20 +30,7 @@ app.controller('BlogCtrl', function ($scope, $http) {
                              , swingSpeed: 0.08
                              , easing: 'swing'
                              },
-                activatePost = function () {
-                    var $activePost = $slySlidee.children('.active').first();
-                    $http.get('blog/' + $activePost.attr('post'))
-                        .then(function (res) {
-                            $scope.activePost = {
-                                image_url: res.data.image,
-                                content: res.data.content,
-                                title: getPostTitle($activePost)
-                            };
-                        }, function (err) {
-                            console.log(err);
-                        });
-                },
-                slyEvents = { active: activatePost },
+                slyEvents = { active: function () { activatePost($slySlidee.children('.active').first()); } },
                 postsListSly = new Sly("#posts-list", slyOptions, slyEvents).init();
 
             return {
@@ -87,7 +70,7 @@ app.controller('BlogCtrl', function ($scope, $http) {
             // If you don't fade-out the entire bar, it overlaps the posts-list and prevents scrolling
             $('.bottom-bar').fadeOut('fast');
         },
-        updateButton = function () {
+        refreshBackButton = function () {
             $('.back').hide().show();
         };
 
@@ -98,13 +81,12 @@ app.controller('BlogCtrl', function ($scope, $http) {
     // The items don't refresh properly on orientation change by default.  The postsList needs to be
     // throttled and refreshed manually for the posts list to display as expected on orientation
     // change and browser resize.
-    window.addEventListener('orientationchange', slyCtrl.resetPostsList);
-    window.addEventListener('resize', slyCtrl.resetPostsList);
-
+    $(window).on('orientationchange', slyCtrl.resetPostsList);
+    $(window).on('resize', slyCtrl.resetPostsList);
     $('.btn.read').on('click touch', slideInText);
     $('.btn.back').on('click touch', backToCover);
     // If you don't refresh the button while scrolling, it 'sticks' on mobile devices.
-    $('#blog-main').on('scroll', updateButton);
+    $('#blog-main').on('scroll', refreshBackButton);
     $('.hard').on('touchmove', function (e) {
         console.log('moved');
     });
