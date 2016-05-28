@@ -1,5 +1,4 @@
-//= require jquery/jquery.min
-//= require jquery-ui/jquery-ui.min
+//= require jquery/dist/jquery.min
 //= require bootstrap-sass-official/assets/javascripts/bootstrap-sprockets
 //= require angular/angular.min
 //= require angular-animate/angular-animate.min

@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: { registrations: 'registrations', sessions: 'sessions' }
   root 'pages#home'
 
   get 'portfolio' => 'portfolio#index'
 
   get 'blog' => 'blog#index'
   get 'blog/:id' => 'blog#show'
+  post 'blog/:id/comments' => 'blog#create_comment'
 
   get 'profile' => 'profile#index'
 
