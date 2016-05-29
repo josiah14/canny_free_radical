@@ -183,7 +183,7 @@ app.controller('BlogCtrl', function ($scope, $http) {
                    , headers: { 'X-Transaction': 'Create new comment'
                               , 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
                               }
-                     , data: { content: $scope.newComment.content }
+                   , data: { content: $scope.newComment.content }
                    }).success(function (data, y, x) {
                        if (x.status === 201) {
                            $scope.comments.unshift({

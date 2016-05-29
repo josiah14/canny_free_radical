@@ -8,7 +8,7 @@ with import <nixpkgs> {}; {
         libyaml
         libxml2
         libxslt
-	libiconv
+        libiconv
         ruby_2_3
         bundler
         zlib

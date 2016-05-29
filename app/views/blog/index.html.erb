@@ -29,6 +29,13 @@
             </div>
         </div>
         <div id="blog-text">
+            <% if user_signed_in? && current_user.is_admin? %>
+                <div class='text-center'>
+                    <a href='/blog/posts/new' style='width: 110%; border-radius: 0;' id='create-post-link-button' class='btn btn-primary' role='button'><h2>Create New Post</h2></a>
+                    <hr>
+                    <br>
+                </div>
+            <% end %>
             <div class="bottom-bar white">
                 <div class="btn btn-primary back">Back</div>
             </div>
