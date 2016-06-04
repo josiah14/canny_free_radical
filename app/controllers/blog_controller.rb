@@ -11,7 +11,19 @@ class BlogController < ApplicationController
     end
   end
 
-  # just a test comment
+  # display form to create a new Post
+  def new
+    unless user_signed_in? && current_user && current_user.is_admin?
+      render status: 403, html: 'You must be signed-in as an admin to add a post.'
+    end
+  end
+
+  def create
+    unless user_signed_in? && current_user && current_user.is_admin?
+      render status: 403, json: 'You must be signed-in as an admin to create a post.'
+    end
+  end
+
   def show
     post = Post.find(params[:id])
     render json: {

@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'portfolio' => 'portfolio#index'
 
   get 'blog' => 'blog#index'
+  get 'blog/new' => 'blog#new'
+  post 'blog' => 'blog#create'
   get 'blog/:id' => 'blog#show'
   post 'blog/:id/comments' => 'blog#create_comment'
 
