@@ -13,6 +13,7 @@
  *= require_self
  *= require bootstrap
  *= require highlightjs/styles/github
+ *= require angular-ui-layout/src/ui-layout
  *= require_tree .
  */
 
