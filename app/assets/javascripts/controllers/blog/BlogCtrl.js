@@ -39,7 +39,7 @@ app.controller('BlogCtrl', function ($scope, $http) {
             updateUrl(updateUrlParameter(preQueryStringUri, queryString(), window.location.hash, 'post', $el.attr('post')));
             $el.addClass('active');
 
-            $http.get('blog/' + $el.attr('post')).then(function (res) {
+            $http.get('/blog/' + $el.attr('post')).then(function (res) {
                 $scope.activePost = {
                     image_url: res.data.image,
                     content: res.data.content,

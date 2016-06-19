@@ -1,0 +1,23 @@
+textarea.form-control#new-post-markdown {
+    /* background-color: gray !important; */
+    width: 90% !important;
+    box-sizing: border-box !important;         /* For IE and modern versions of Chrome */
+    -moz-box-sizing: border-box !important;    /* For Firefox                          */
+    -webkit-box-sizing: border-box !important; /* For Safari                           */
+    text-align: left;
+    margin: auto;
+    display: inline-block;
+    resize: vertical;
+}
+
+.form-horizontal .control-label {
+    text-align: center;
+}
+
+.btn#submit-new-post {
+    width: 90%;
+}
+
+
+
+

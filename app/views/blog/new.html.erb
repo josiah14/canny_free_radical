@@ -1,4 +1,23 @@
 <div ui-layout="{ flow: 'column' }">
-    <div ui-layout-container>Hello!</div>
-    <div ui-layout-container="central">World!</div>
+    <div ui-layout-container id='left-new-post-split'>
+        <div class='row'>
+            <div class='span12'>
+                <form class='form-horizontal'>
+                    <fieldset>
+                        <h1 class='text-center'>New Post</h1>
+                        <hr>
+                        <div class='control-group text-center' id='new-post-content'>
+                            <label class='control-label'>Post Markdown</label>
+                            <textarea marked class='form-control' id='new-post-markdown' rows='20' ng-model='newPost.content'></textarea>
+                            <hr>
+                            <button class='btn btn-primary' id='submit-new-post'><h4><b>Submit</b></h4></button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div ui-layout-container="central">
+        World!
+    </div>
 </div>

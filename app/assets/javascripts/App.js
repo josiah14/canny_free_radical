@@ -1,4 +1,9 @@
-var app = angular.module('canny-free-radical', ['ui.bootstrap', 'hc.marked', 'ngResource', 'ngAnimate', 'ui.layout']);
+var app = angular.module('canny-free-radical', [ 'ui.bootstrap'
+                                               , 'hc.marked'
+                                               , 'ngResource'
+                                               , 'ngAnimate'
+                                               , 'ui.layout'
+                                               ]);
 
 app.config(['markedProvider', function (markedProvider) {
     markedProvider.setOptions({
