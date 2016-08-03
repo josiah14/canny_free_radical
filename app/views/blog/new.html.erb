@@ -12,6 +12,8 @@
                                 <input class='form-control' id='new-post-title' ng-model='newPost.title'>
                                 <label class='control-label'>Post Markdown</label>
                                 <textarea class='form-control' id='new-post-markdown' rows='20' ng-model='newPost.content'></textarea>
+                                <label class='control-label'>Image File</label>
+                                <input class='form-control' type='file' accept='image/*' id='new-post-image-path' ng-model='newPost.image-path'>
                                 <hr>
                                 <button class='btn btn-primary' id='submit-new-post' ng-click='submitPost()'>
                                     <h4><b>Submit</b></h4>
