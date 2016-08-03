@@ -1,13 +1,21 @@
 textarea.form-control#new-post-markdown {
-    /* background-color: gray !important; */
-    width: 90% !important;
+    width: 90%;
     box-sizing: border-box !important;         /* For IE and modern versions of Chrome */
     -moz-box-sizing: border-box !important;    /* For Firefox                          */
     -webkit-box-sizing: border-box !important; /* For Safari                           */
     text-align: left;
     margin: auto;
-    display: inline-block;
+    /* display: inline-block; */
     resize: vertical;
+}
+
+#new-post-title {
+    width: 90%;
+    box-sizing: border-box !important;         /* For IE and modern versions of Chrome */
+    -moz-box-sizing: border-box !important;    /* For Firefox                          */
+    -webkit-box-sizing: border-box !important; /* For Safari                           */
+    text-align: left;
+    margin: auto;
 }
 
 .form-horizontal .control-label {
@@ -17,11 +25,4 @@ textarea.form-control#new-post-markdown {
 .btn#submit-new-post {
     width: 90%;
 }
-
-#new-post-markdown {
-    margin: 0 20px 0 20px;
-}
-
-
-
 
