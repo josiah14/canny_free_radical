@@ -1,7 +1,10 @@
 app.controller('NewPostCtrl', function ($scope, $http) {
     $scope.submitPost = function () {
         $http.post( '/blog/'
-                  , { content: $scope.newPost.content }
+                  , { content: $scope.newPost.content
+                    , imagePath: $scope.newPost.imagePath
+                    , title: $scope.newPost.title
+                    }
                   , { headers: { 'X-Transaction': 'Delete current user session'
                                , 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
                                }
