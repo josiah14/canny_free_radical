@@ -3,6 +3,7 @@ var app = angular.module('canny-free-radical', [ 'ui.bootstrap'
                                                , 'ngResource'
                                                , 'ngAnimate'
                                                , 'ui.layout'
+                                               , 'ngFileUpload'
                                                ]);
 
 app.config(['markedProvider', function (markedProvider) {

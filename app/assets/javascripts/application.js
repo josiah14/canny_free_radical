@@ -5,6 +5,7 @@
 //= require angular-animate/angular-animate.min
 //= require angular-route/angular-route.min
 //= require angular-resource/angular-resource.min
+//= require ng-file-upload/ng-file-upload.min
 //= require angular-bootstrap/ui-bootstrap.min
 //= require angular-bootstrap/ui-bootstrap-tpls.min
 //= require angular-ui-layout/src/ui-layout.js

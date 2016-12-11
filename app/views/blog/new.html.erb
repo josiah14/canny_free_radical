@@ -1,4 +1,4 @@
-<div ng-controller='NewPostCtrl' id="{{ page }}}">
+<div ng-controller='NewPostCtrl' id="{{ page }}}" >
     <div ui-layout="{ flow: 'column' }">
         <div ui-layout-container id='left-new-post-split'>
             <div class='row'>
@@ -13,9 +13,17 @@
                                 <label class='control-label'>Post Markdown</label>
                                 <textarea class='form-control' id='new-post-markdown' rows='20' ng-model='newPost.content'></textarea>
                                 <label class='control-label'>Image File</label>
-                                <input class='form-control' type='file' accept='image/*' id='new-post-image-path' ng-model='newPost.imagePath'>
+                                <input class='form-control'
+                                       name='file'
+                                       type='file'
+                                       accept='image/*'
+                                       ngf-pattern="'image/*'"
+                                       ngf-accept="'image/*'"
+                                       id='new-post-image-path'
+                                       ngf-select
+                                       ng-model='file' \>
                                 <hr>
-                                <button class='btn btn-primary' id='submit-new-post' ng-click='submitPost()'>
+                                <button class='btn btn-primary' id='submit-new-post' ng-click='submit()'>
                                     <h4><b>Submit</b></h4>
                                 </button>
                             </div>

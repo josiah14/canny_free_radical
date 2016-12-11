@@ -25,6 +25,7 @@ class BlogController < ApplicationController
     unless user_signed_in? && current_user && current_user.is_admin?
       render status: 403, json: 'You must be signed-in as an admin to create a post.'
     end
+    binding.pry
     content = params.require('blog').require('content')
     puts content
     binding.pry

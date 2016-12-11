@@ -14,6 +14,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # Authentication manager
 gem 'devise', '~> 3.4.1'
+# Image Upload
+gem 'carrierwave', '>= 1.0.0.rc', "< 2.0"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
